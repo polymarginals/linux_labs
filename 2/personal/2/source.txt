@@ -1,0 +1,2 @@
+this is a plan text with embedded *italic text* somewhere and also **bold text**. Don't forget to include
+w*rong formatted ** text.

@@ -1,1 +1,1 @@
-find . -name "emails*.txt" -exec grep -Eo '[a-z]+[a-z0-9\.\-]*@[a-z0-9]+(\.{1}[a-z0-9\-]+)*\.{1}[a-z]{2,}' {} \; | grep -Ev '(((\.|\-)@)|(\.{2,}|\-{2,}|(\.\-)+|(\-\.)+))' | tr A-Z a-z | sort -u > base.txt
+find -name "*.txt" -exec grep -Eoi "(^|\s|\(|\:|\t)[a-z]+([\._\-]?[a-z0-9]+)*@[a-z]+([\._\-]?[a-z0-9]+)*\.[a-z]+(\s|\)|\t|$)" '{}' \; | grep -Eoi "[a-z].*[a-z]" | tr "[A-Z]" "[a-z]" | sort -u > base.txt

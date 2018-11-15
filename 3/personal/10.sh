@@ -1,11 +1,18 @@
 #!/bin/sh
 
-printf "Enter N: "
-read N
-while ! [ -n "$N" -o "$N" -eq "$N" ] 2>/dev/null
+is_n_correct=false
+while ! [ "$is_n_correct" = true ]
 do
-  printf "N should be an integer. Try again: "
-  read N;
+  printf "Enter an odd integer: "
+  read N
+  check=`echo "$N" | grep ^[0-9]*[13579]$`
+
+  if [ "$check" != '' ]; then
+    is_n_correct=true
+  else
+    is_n_correct=false
+    printf "Wrong input. "
+  fi
 done
 
 for i in $(seq $N -1 1)
@@ -17,10 +24,10 @@ do
   done
   if [ $i -eq $N -o $i -eq 1 ]
   then
-  for j in $(seq $i -1 1)
-  do
-    printf "* "
-  done
+    for j in $(seq $i -1 1)
+    do
+      printf "* "
+    done
   else
     printf "* "
     for j in $(seq $((i-2)) -1 1)

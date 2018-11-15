@@ -1,3 +1,3 @@
 na    me1@ya.ru
-nAmE@ya1.ya2.ru
-not mail@ya.ru
+(nAmE@ya1.ya2.ru)
+not :mail@ya.ru:

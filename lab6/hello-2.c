@@ -5,7 +5,7 @@
 
 #include <linux/module.h> /* Необходим для любого модуля ядра */
 #include <linux/kernel.h> /* Здесь находится определение KERN_ALERT */
-#include <linux/init.h> /* Здесь находятся определения макросов */
+#include <linux/init.h>   /* Здесь находятся определения макросов */
 
 MODULE_LICENSE("GPL");
 
